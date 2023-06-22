@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Banking System</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="loginPage">
+    <h1>Welcome to Basic Banking System</h1>
+    <div class="loginContainer">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign up</a></p>
+    </div>
+  </div>
+
+  <div id="signUpPage" style="display: none;">
+    <h1>Sign Up</h1>
+    <div class="loginContainer">
+      <input type="text" id="newUsername" placeholder="Username">
+      <input type="password" id="newPassword" placeholder="Password">
+      <button onclick="createAccount()">Create Account</button>
+      <p>Already have an account? <a href="#" onclick="showLoginPage()">Login</a></p>
+    </div>
+  </div>
+
+  <div id="mainPage" style="display: none;">
+    <h1>Welcome, <span id="usernameDisplay"></span>!</h1>
+
+    <div class="container">
+      <div class="balance">
+        <h2>Account Balance</h2>
+        <p id="balance">0</p>
+      </div>
+      
+      <div class="transaction">
+        <h2>Transaction</h2>
+        <input type="number" id="amount" placeholder="Enter amount" min="0" step="0.01">
+        <button onclick="deposit()">Deposit</button>
+        <button onclick="withdraw()">Withdraw</button>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
